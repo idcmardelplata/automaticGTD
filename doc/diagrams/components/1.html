@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Component diagram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <article>
+      <p>As user, i want to separate my gtd workflow into different sections like "inputs" "Get clear" "Organize" "Review" "Run</p>
+    </article>
+    <pre class="mermaid">
+C4Component
+    title Diagrama de componentes para gtd automatization
+
+    Boundary(Sys,"sys boundary"){
+        Container_Boundary(CLI,"CLI",""){
+            Component("Visualizador","Visualizador","bash","presenta información para el usuario")
+            Component("RevisarEstado","RevisarEstado","bash","Se asegura de mantener los procesos necesarios activos")
+            Component("Out","out","","Envía peticiones al server")
+            
+        }
+        Container_Boundary(SERVER,"SERVER",""){
+            Component(router,"router","","Direcciona peticiones")
+            Container_Boundary("Services","services"){
+                Component(service,"service","","hace algo")
+                Component(service2,"service2","","Hace otro algo")
+            }
+            Component(Context,"Context","","Recepts and runs the strategy")
+            Component(OutServer,"OutServer","","Recepts and runs the strategy")
+        
+        }
+    }
+
+Rel(Out,router,"","Envía peticiones")
+Rel(OutServer,Visualizador,"","Envía resultado proces")
+Rel(router,service,"","Llama a")
+Rel(router,service2,"","Llama a")
+    </pre>
+
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true});
+    </script>
+  </body>
+</html>

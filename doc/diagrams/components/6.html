@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Component diagram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <pre class="mermaid">
+      C4Component
+    title Diagrama de componentes para gtd automatization
+
+  Boundary(Mysys,"MySys"){
+    Component(CLI,"CLI")
+    Component(SERVER,"SERVER")
+  }
+
+  ComponentDb_Ext(DB,"DB")
+
+  Rel(SERVER,DB,"Persists things")
+  BiRel(CLI,SERVER,"Conects Jose and Soft System")
+    </pre>
+
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true});
+    </script>
+  </body>
+</html>

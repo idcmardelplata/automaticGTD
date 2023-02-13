@@ -20,7 +20,7 @@ C4Component
 
     Container_Boundary(deamon,"deamon"){
         Component(systemConfigService,"SysConfigService","toml","instructs deamon how to interact with this app")
-        Component(comunicationService,"comunicationService","bashscript","allows cli and serveer comunication passing msgs between them")
+        Component(comunicationService,"DBUS","bashscript","allows cli and serveer comunication passing msgs between them")
     }
 
     Container_Boundary(server,"server"){
