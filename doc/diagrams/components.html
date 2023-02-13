@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Component diagram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <pre class="mermaid">
+C4Component
+    title Diagrama de componentes para la historia de ingresar input a bandeja de entrada
+
+    Container_Boundary(cli,"cli"){
+        Component(ServicesAdmin,"ServicesAdmin","crystal","adm the status of app services")
+        Component(InfiniteOptionList,"InfiniteOptionList","crystal","Ask constantly for orders")
+        Component(Visualizator,"Visualizator","crystal","presents info to the user")
+        Component(Exchanger,"Exchanger","crystal","sends and recieve information from and to the server")
+    }
+
+    Container_Boundary(deamon,"deamon"){
+        Component(systemConfigService,"SysConfigService","toml","instructs deamon how to interact with this app")
+        Component(comunicationService,"comunicationService","bashscript","allows cli and serveer comunication passing msgs between them")
+    }
+
+    Container_Boundary(server,"server"){
+        Component(router,"router","crytal","recepts and redirect a petition")
+        Component(notificator, "notificator","crystal", "Notify to the system about the procesator's requests's status ")
+        Component(procesator,"procesator","crystal","process orders and returns a response")
+    }
+
+    Container_Boundary(persistence,"persistence"){
+        Component(persistence,"persistence")
+    }
+
+Rel(InfiniteOptionList,Exchanger,"sends user petitions")
+Rel(router,procesator,"calls required work")
+Rel(comunicationService,router,"tells the cli's petition to server")
+Rel(procesator,notificator,"sends processament status")
+Rel(notificator,comunicationService,"notify about processament status")
+BiRel(comunicationService,Exchanger,"cli and server are conected by this")
+Rel(Exchanger,Visualizator,"tells to user how've it done")
+Rel(InfiniteOptionList,Visualizator,"tells to user what options he has")
+BiRel(procesator,persistence,"manage things to be persisted")
+Rel(ServicesAdmin,Visualizator,"reports to the user what's going on with the app's processes and so")
+    </pre>
+
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true});
+    </script>
+  </body>
+</html>

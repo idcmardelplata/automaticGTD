@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Context diagram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <pre class="mermaid">
+  C4Component
+    title Diagrama de contexto para gtd automatization
+
+    Boundary("Uses for Jose", "Uses for jose", "use cases"){
+    Person("Jose","Jose","Ingresa inputs a bandeja de entrada") 
+    Person("Jose2","Jose", "Clarifica cosas de la bandeja de entrada") 
+    Person("Jose3","Jose", "Organiza información en el sistema")
+    Person("Jose$","Jose", "Revisa la información de su sistema")
+    Person("Jose4","Jose", "Ejecuta tareas siguientes")
+    }
+    System_Boundary(softSys,"System boundary") {
+         System(sys, "GTDSystem", "GTD automatization tools")
+    }
+    
+    SystemDb_Ext(external_db, "DATABASE", "Almacena datos del sistema")
+    
+    Rel(sys , external_db , "usa" , "usa")
+    Rel(Jose,sys,"usa")
+    Rel(Jose2,sys,"usa")
+    Rel(Jose3,sys,"usa")
+    Rel(Jose4,sys,"usa")
+  
+    </pre>
+
+    <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true});
+    </script>
+  </body>
+</html>
