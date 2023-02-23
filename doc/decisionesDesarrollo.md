@@ -4,3 +4,4 @@ Patrones de arquitectura:
 
 Cliente servidor para disponibilidad y facilidad de desarrollo
 
+Patrones de diseño: Singleton para la instanciación en tiempo de ejecución de los copmonentes fundamentales del server

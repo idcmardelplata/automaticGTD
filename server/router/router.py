@@ -1,2 +1,5 @@
-def route(value):
-    return True
+from server.dependencies import container
+
+def route(order):
+    return c
+

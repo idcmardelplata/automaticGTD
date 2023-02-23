@@ -1,6 +1,6 @@
 from behave import *
 from server.inbox import inboxmodule as inbox 
-from mocks import listener 
+from mocks import listener
 from server.router import router
 from server.store import store
 
@@ -14,7 +14,5 @@ def impl_bk(context):
 
 @then("the system should let me store it")
 def impl_bk(context):
-    return store.stored=="i want to store a new input
-"
-
+    return store.stored=="i want to store a new input"
 
