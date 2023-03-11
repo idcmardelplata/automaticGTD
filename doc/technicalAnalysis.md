@@ -33,6 +33,8 @@ Cliente servidor para disponibilidad y facilidad de desarrollo
 
 Patrones de diseño: Singleton para la instanciación en tiempo de ejecución de los copmonentes fundamentales del server
 
+se valora el patrón observador para transmitir eventos desde el cliente
+
 #techs
 
 Python will be used for implement the first step system, then when it's working i can consider to switch to another language
