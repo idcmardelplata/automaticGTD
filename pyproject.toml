@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "automaticgtd"
+version = "0.1.0"
+description = ""
+authors = ["Jose Simon Pepe"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+behave = "^1.2.6"
+poethepoet = "^0.18.1"
+
+[tool.poe.tasks]
+bdd   = "behave"                                # simple command based task
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
