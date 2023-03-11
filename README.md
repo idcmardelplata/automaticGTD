@@ -1,6 +1,6 @@
 # AUTOMATIC GTD MANAGER
 
-¿Got issues with your life manager's usability? As a [GTD](https://es.wikipedia.org/wiki/Getting_Things_Done) adherent, i did it too. 
+¿Got issues with your life manager's usability? As a (GTD)[https://es.wikipedia.org/wiki/Getting_Things_Done] adherent, i did it too. 
 Notion is a powerfull tool to do it, but i believe that its way allows u to, rapidly, create a more complex life managing frame than you can really hold.
 At least, that was my experience.
 I aim to create a simpler and gtd based cli tool for us to simplify our projects administration.
@@ -19,6 +19,12 @@ Content:
 
 ## Main features 
 ...to be delivered in the first installment
+=======
+## Dev Stage
+
+== This is on pre-alpha. Main features are not availables yet.
+
+## Main features to be delivered the first.
 
 I'm working on this set of features...
   1. CRUD of tasks, projects, life resp areas, goals, vision and life-vision.
@@ -38,7 +44,7 @@ If you're like me:
 ... so, sure you want to try this.
 Nothing like use a tool created by similar people...
 
-If you appreciate complexity on task managing, or you want to work in a more "chaotic" way, i strong do not suggesfor you to use this.
+If you appreciate complexity on task managing, or you want to work in a more "chaotic" way, i strong do not suggest for you to use this.
 
 ## How to use
 ...
