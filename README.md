@@ -8,23 +8,16 @@ I aim to create a simpler and gtd based cli tool for us to simplify our projects
 Content:
 
 - [GTD Approach implemented](#gtd-approach-implemented)
-- [Project's life Stage](#project-life-stage)
-- [Main features](#main-features)
-- [Should you use this?](#should-you-use-this?)
+- [Project's life stage](#project-life-stage)
+- [Main features](#main-features-to-be-delivered-the-first)
+- [Should you use this?](#should-you-use-this)
 - [How to use](#how-to-use)
 
-## Stage
+## Project's life stage
 
 == This is on pre-alpha. Main features are not availables yet ==
 
-## Main features 
-...to be delivered in the first installment
-=======
-## Dev Stage
-
-== This is on pre-alpha. Main features are not availables yet.
-
-## Main features to be delivered the first.
+## Main features to be delivered the first
 
 I'm working on this set of features...
   1. CRUD of tasks, projects, life resp areas, goals, vision and life-vision.
