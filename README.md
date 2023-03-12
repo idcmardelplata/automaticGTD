@@ -32,6 +32,7 @@ This project implements such a own way of GTD methodology:
 #### System Reviews
 
 - Long reviews use to be a mental beating
+
 GTD often causes the problem of having too long lists to be mantained:
 you should review it with a frequency corresponding to the level of results it generates (according to how much it impacts your higher objectives) in order to maintain the highest efficiency in what is most valuable, but how do you do it by having endless lists?
 In my own view, we have to consider that, in our life, there is a priority hierarchy, and we can decide when, what and how to review.
@@ -39,6 +40,7 @@ My proposal is about *defining thing's priority types*, and set different differ
 At least, there is 3 basic priority types (low, medium and high priority of revision).
 
 - Weekly review use to be mentally hard
+
 This clashes directly with the concept of operational efficiency sought by gtd, given that, only after a lot of hard thinking at high levels of vision, we focus on the "day-to-day" level.
 
 At now, we can find that our one "weekly" revision broke down in, at least, 3 simpler and quicker reviews: for low, medium and high levels of worth, we gonna do casual, frequent and constant reviews, respectively.
