@@ -20,14 +20,14 @@ Main sources are original GTD book from David Allen, and i'm often inspired by t
 ### Project's gtd's values:
 
 - Computerized storage over brain storage
-- Efficacy with efficiency over pure efficiency
+- Efficacy with efficiency over pure Efficacy
 - Reflection and organization over chaos
 - Long-term maintainability over efficacy
 - Decomposition of complexity over occasional hard work.
 
 ### GTD approach
 
-This project implements such a own way of gtd methodology:
+This project implements such a own way of GTD methodology:
 
 #### System Reviews
 
