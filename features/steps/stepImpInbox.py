@@ -1,14 +1,24 @@
 from behave import *
 
-@given("i've started listener service")
-def impl_bk(context):
-    pass
+class Core:
+    def __init__(self) -> None:
+        self.inbox = []
+        return None
 
-@when("i indicate that i want to store a new input")
-def impl_bk(context):
-    pass
+    def add(self, input):
+        self.inbox.append(input)
 
-@then("the system should let me store it")
-def impl_bk(context):
-    pass
+
+@given("que recivo nueva informacion y deseo almacenarla en el sistema")
+def receive_new_info(context):
+    context.core = Core()
+    context.new_info = "hola que tal"
+
+@when("la cargue en el inbox")
+def add_new_info(context):
+    context.core.add(context.new_info)
+
+@then("La informacion debera quedar disponible para clarificarse mas adelante")
+def info_is_stored(context):
+    len(context.core.inbox) == 1
 
