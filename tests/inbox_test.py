@@ -1,5 +1,6 @@
 import pytest
 from core.inbox_text import InboxText
+import os
 
 # TODO: Refactorizar el codigo fuente.
 # TODO: Refactorizar las pruebas
@@ -7,6 +8,7 @@ from core.inbox_text import InboxText
 # TODO: Probar los siguientes escenarios:
 # Las tareas no pueden estar duplicadas : DONE
 # Es necesario establecer un formato para agregar un input (fecha de expiracion, importancia etc..) : 
+# TODO: determinar el uso del almacenamiento en memoria de los inputs, en la principal y en el disco... ¿Por que dejarías algo en memoria en el objeto inbox si lo estas persistiendo automáticamente al añadirse con add()?
 
 inbox = InboxText()
 
@@ -44,6 +46,5 @@ def test_inputs_cannot_be_duplicated():
     inbox.add("non duplicable input")
     inbox.add("non duplicable input")
     assert inbox.count() == 1
-
-def test_text_input_must_follow_the_input_text_datamodel():
-    
+    with open("/tmp/inputs.txt","r+") as file:
+        assert file.read().count("non duplicable input") == 1

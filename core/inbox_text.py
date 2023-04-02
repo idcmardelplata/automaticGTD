@@ -17,7 +17,15 @@ class InboxText:
         with open(self.path, "r+") as file:
             self.inputs = file.readlines()
         return self.inputs
-    
-    def clean(self):
+   
+    def clean(this):
+        this.cleanList()
+        this.cleanDisk()
+
+    def cleanList(self):
         if self.inputs!=0:
             self.inputs.clear()
+
+    def cleanDisk(self):
+        with open(self.path, "r+") as file:
+            file.truncate(0)
