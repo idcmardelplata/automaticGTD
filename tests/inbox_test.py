@@ -11,7 +11,7 @@ import os
 # TODO: determinar el uso del almacenamiento en memoria de los inputs, en la principal y en el disco... ¿Por que dejarías algo en memoria en el objeto inbox si lo estas persistiendo automáticamente al añadirse con add()?
 
 inbox = InboxText()
-
+#necesita refactor
 def test_should_store_a_new_input_in_text_format():
     user_input = "this is a test"
 
