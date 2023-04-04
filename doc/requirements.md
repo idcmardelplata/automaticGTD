@@ -218,3 +218,112 @@ Environment: CLI
 # Observaciones:
 
 - Es necesario crear una forma de relacionar ciertas tareas (¿extendiendo markdown?)
+
+
+## User Histories
+
+1. Como usuario, quiero separar mi flujo de 5 etapas de GTD en diferentes secciones cómo "Inbox" "Clarificar" "Organizar" "Revisar" "Ejecutar"
+
+2. Como usuario, quiero CrUD una descripción de identidad deseada, para poder relacionarla con mis Objetivos
+
+3. Como usuario, quiero CrUD un objetivo de medio Plazo
+
+4. Como usuario, quiero CrUD proyectos
+
+5. Como usuario, quiero CrUD acciones que pertenezan a un proyecto o más
+
+6. Como usuario, quiero que el sistema me presente un metodo ordenado por defecto para hacer revisiones semanales
+
+8. Como usuario, quiero ver informacion unicamente necesaria segun la etapa en la que este en el momento actual de GTD
+
+9. Como usuario, quiero poder asignarle uno o mas contextos a una accion
+
+10. Como usuario, quiero que el sistema me muestre una lista de acciones correspondientes segun el/los contexto/s que elija
+
+11. Como usuario, quiero poder relacionar un proyecto con uno o mas objetivos de medio Plazo
+
+12. Como usuario, quiero agregar inputs audiovisuales y textuales a una bandeja de entrada centralizada
+
+13. Como usuario, quiero que el sistema me presente un metodo ordenado por defecto para clarificar 
+
+14. Como usuario, quiero poder crear contextos en el sistema
+
+15. Como usuario, quiero que el sistema me presente un metodo ordenado de Organizacion 
+
+16. Como usuario, quiero que el sistema me presente un metodo ordenado de Revision por cada lista por defecto del sistema 
+
+17. Como usuario, quiero que el sistema me presente un metodo ordenado de Ejecucion 
+
+18. Como usuario, quiero que el sistema me permita modificar los metodos ordenados por defecto para los estados de gtd
+
+## Value Points
+
+El formato es: Value Point(17) -> Índice, Índice
+
+17 -> 12
+16 -> 5
+15 -> 4
+14 -> 9
+13 -> 10
+12 -> 17
+11 -> 18
+10 -> 14
+9 -> 16
+8 -> 13
+7 -> 1
+6 -> 15
+5 -> 3
+4 -> 11
+3 -> 6
+2 -> 2
+1 -> 8
+
+## Interdependencias de las 5 más importantes (12,5,4,9,10)
+
+12 no tiene dependencia con las listadas
+5 depende de 4
+4 no tiene dependencia con las listadas
+9 depende de 14
+10 depende de 5 y de 14
+
+## acciones de las 5 más importantes
+
+14:
+  - Determinar almacenamiento de los contextos en el dispositivo
+  - Determinar el modelo de datos que debería tener un contexto
+  - Permitir ingresar un texto como nombre del contexto
+  - Asegurarme de que no sea repetible un contexto
+  - Permitir visualizar en una lista todos los contextos almacenados
+  - Permitir modificar el nombre de un contexto
+  - Permitir eliminar un contexto 
+4:
+  - Determinar almacenamiento de los proyectos en el dispositivo
+  - Determinar el modelo de datos que debería tener un proyecto 
+  - Asegurarme que no sean repetibles en el sistema 
+  - Permitir crear un nuevo proyecto 
+  - Permitir almacenar un nuevo proyecto 
+  - Permitir modificar los atributos de un proyecto existente
+  - Permitir eliminar un proyecto existente
+  - Indicar llamativamente cuando un proyecto no tenga al menos 1 acción 
+5: 
+  - Determinar almacenamiento de las acciones en el dispositivo
+  - Determinar el modelo de datos que debería tener una acción
+  - Asegurarme que no sean repetibles en el sistema
+  - Permitir crear una acción
+  - Permitir modificar una acción existente 
+  - Permitir indicar si una acción está desbloqueada  para accionarse o está bloqueada por otra
+  - Indicar en caso de estar bloqueada por otra acción o varias, por cuales
+  - Permitir eliminar una acción existente
+  - Indicar llamativamente cuando una acción no tenga al menos un contexto
+  - Indicar llamativamente cuando una acción no tenga al menos un proyecto 
+  - Permitir agendar la fecha en la cual se creó la acción en el sistema
+9:  
+  - Permitir ingresar uno o varios contextos existentes a una acción ya existente
+  - Permitir ingresar uno o varios contextos existentes a una acción cuando ésta se está creando
+  - Permitir eliminar uno o varios contextos de una acción
+  - Al intentar eliminar un contexto que tiene relacionadas acciones, indicarlo de forma llamativa e informativa al usuario mostrando cuales acciones quedan sin contexto
+  - Al eliminar un contexto que tiene relacionadas acciones, asegurarme que no se puedan listar al filtrar acciones por el contexto eliminado
+  - Al eliminar "" "" "", asegurarme que acciones relacionadas con el contexto eliminado, pero también con otros, puedan ser listadas al filtrar acciones por esos otros contextos existentes
+10:
+  - Permitir ingresar un contexto o varios por los cuales filtrar las acciones existentes 
+  - Crear una lista filtrada por demanda según el contexto ingresado
