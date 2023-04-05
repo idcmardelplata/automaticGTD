@@ -329,3 +329,30 @@ El formato es: Value Point(17) -> Índice, Índice
   - Crear una lista filtrada por demanda según el contexto ingresado
 
 
+## Requerimientos para las 5 historias más importantes
+ 
+12. Como usuario, quiero agregar inputs audiovisuales y textuales a una bandeja de entrada centralizada
+
+1. Tecnologias:
+  - Python para la lógica de negocio
+  - Python para la interfaz de usuario
+  - x para almacenamiento de los inputs -> decidir
+  - ¿Cómo grabar una nota de audio? -> aprender
+  - Cómo se almacenan los caractéres especiales y emoticones? deberían almacenarse de qué forma? -> aprender
+  - ¿Cómo almacenar una imagen? -> aprender
+  - ¿Cómo almacenar un video?
+2. Casos de uso 
+  - Agregar input de texto
+  - Agregar input de audio
+  - Agregar input de video
+  - Agregar input de imagen
+3. Reestricciones
+  ?
+4. Atributos de calidad
+  - Accesibilidad
+  - Facilidad de uso 
+  - Fiabilidad de almacenamiento
+5. Lenguaje Obicuo:
+  - Inbox: Es una bandeja de entrada con la responsabilidad de almacenar información nueva para el individuo
+  - Input: Es la información nueva que el individuo debe almacenar en el inbox
+  - Clarificar: Es un proceso donde se extrae conocimiento significativo para la persona de un input y se la organiza en el sistema
