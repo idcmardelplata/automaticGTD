@@ -222,7 +222,7 @@ Environment: CLI
 
 ## User Histories
 
-1. Como usuario, quiero separar mi flujo de 5 etapas de GTD en diferentes secciones cómo "Inbox" "Clarificar" "Organizar" "Revisar" "Ejecutar"
+1. Como usuario, quiero que el sistema separe las funcionalidades relacionadas con el flujo de informacion a trabajo en 5 pasos diferentes, Inbox, clarificar, Organizar, Revisar, Ejecutar // dudosa, no es concreta
 
 2. Como usuario, quiero CrUD una descripción de identidad deseada, para poder relacionarla con mis Objetivos
 
@@ -232,9 +232,9 @@ Environment: CLI
 
 5. Como usuario, quiero CrUD acciones que pertenezan a un proyecto o más
 
-6. Como usuario, quiero que el sistema me presente un metodo ordenado por defecto para hacer revisiones semanales
+6. Como usuario, quiero que el sistema me presente un metodo ordenado por defecto para hacer revisiones semanales basado en la metodologia Avanzar Posiciones
 
-8. Como usuario, quiero ver informacion unicamente necesaria segun la etapa en la que este en el momento actual de GTD
+8. Como usuario, quiero ver informacion unicamente necesaria segun la etapa en la que este en el momento actual de GTD // dudoso, no es simple ni concreta
 
 9. Como usuario, quiero poder asignarle uno o mas contextos a una accion
 
@@ -327,3 +327,5 @@ El formato es: Value Point(17) -> Índice, Índice
 10:
   - Permitir ingresar un contexto o varios por los cuales filtrar las acciones existentes 
   - Crear una lista filtrada por demanda según el contexto ingresado
+
+
