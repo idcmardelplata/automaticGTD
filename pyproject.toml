@@ -13,9 +13,14 @@ python = "^3.10"
 [tool.poetry.group.dev.dependencies]
 behave = "^1.2.6"
 poethepoet = "^0.18.1"
+allure-pytest = "^2.13.0"
+allure-behave = "^2.13.1"
 
 [tool.poe.tasks]
 bdd   = "behave"                                # simple command based task
+
+bdd_report = "behave -f allure_behave.formatter:AllureFormatter -o reports ./features"
+report="allure serve reports"
 
 [build-system]
 requires = ["poetry-core"]
