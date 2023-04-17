@@ -7,8 +7,6 @@ from core.inbox_text import InboxText
 # Las tareas no pueden estar duplicadas.
 # Es necesario establecer un formato para agregar un input (fecha de expiracion, importancia etc..)
 
-
-
 def test_should_store_a_new_input_in_text_format():
     user_input = "this is a test"
 
