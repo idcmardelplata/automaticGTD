@@ -22,6 +22,7 @@ bdd   = "behave"                                # simple command based task
 test  = "pytest --verbose"
 
 bdd_report = "behave -f allure_behave.formatter:AllureFormatter -o reports ./features"
+test_report = "pytest --alluredir=reports"
 report="allure serve reports"
 
 [build-system]
