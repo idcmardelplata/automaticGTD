@@ -12,6 +12,7 @@ import os
 
 inbox = InboxText()
 #necesita refactor
+
 def test_should_store_a_new_input_in_text_format():
     user_input = "this is a test"
 
