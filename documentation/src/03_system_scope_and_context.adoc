@@ -1,0 +1,50 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-system-scope-and-context]]
+
+== Alcance y contexto del sistema
+
+=== Contexto de negocio
+
+El sistema permitira a los usuario tomar notas de forma rapida y sencilla
+indistintamente del contexto donde se encuentre dentro del sistema
+
+* Usuario: Persona interesada en gestionar su conocimiento
+* Storage: Lugar donde se almacenaran los inputs
+* Inputs: Notas de texto que el usuario desea crear.
+
+El sistema actualmente no necesita interactuar con servicios externos,
+puesto que todas los inputs (notas) seran almacenados en ficheros de texto
+con un formato predeterminado.
+
+[options="header"]
+|===
+| Vecinos | Descripcion 
+| Usuario | Busca gestionar su conocimiento mediante la aplicacion
+| Storage | Base de datos/fichero que almacena los inputs
+|===
+
+[IMPORTANT]
+.Futuros cambios
+* El tipo de **storage** primeramente sera usando ficheros en disco local pero debemos dar la opcion para que el usuario decida donde desea persistir la informacion.
+* Los **inputs** por ahora son simplemente notas de texto con formato pero mas adelante puede llegar a ser otro tipo de informacion (como audio/video/imagenes por ej)
+
+[mermaid, format=svg, max-get-size=800]
+----
+C4Context
+    Person(user, "usuario de la aplicacion")
+    
+    System_Boundary(boundary, "Boundary") {
+        System(system, "automaticGTD", "GTD Automation tool")
+    }
+    BiRel(user, system, "knowledge management using")
+    UpdateRelStyle(user,system, $offsetY="-100")
+----
+
+=== Contexto Tecnico
+
+|===
+| Tipo de Interfaz | Descripcion
+| Entrada          | El input del usuario sera texto plano sin ningun formato
+| Salida           | El usuario podra leer sus inputs con un formato de texto adecuado segun el tipo de estado del input
+|===

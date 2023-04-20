@@ -1,0 +1,58 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-solution-strategy]]
+== Estrategia de solución
+
+Dada la simpleza del sistema pero a la vez vista la necesidad de expansion a fututo
+he seleccionado python como lenguaje por su facilidad de aprendizaje y porque el sistema
+puede ser facilmente expandido por la comunidad OpenSource.
+
+
+.Desiciones Tecnologicas
+[options="header"]
+|===
+| Lenguaje / Framework / Library | Explicacion
+| Python | Se selecciono python como lenguaje dado que es sencillo de aprender y es dominado por los desarrolladores
+| Typer | Libreria sencilla para hacer aplicaciones de CLI super intuitivas y sin demasiada complejidad
+| Rich | Libreria para formatear la linea de comandos, agregandole color, distintas tipografias, tablas, algunos widgets etc 
+|===
+
+.Desiciones de desarrollo
+
+Herramientas seleccionadas para llevar adelante el desarrollo del sistema
+
+[options="header"]
+|===
+| Python Poetry | Permite instalar dependencias en un entorno virtual y permite distribuir la aplicacion facilmente
+| Git | Necesario para poder gestionar los cambios en el codigo fuente de la aplicacion
+| Github | Repositorio donde estara alojada la aplicacion
+| Docker | Necesario para crear un entorno virtual donde se puedan instalar todas las herramientas de desarrollo sin ensuciar el sistema
+| Arc42 | Necesario para seguir una estructura clara de documentacion
+| Mermaid | Util porque se puede integrar el codigo de los diagramas junto con la documentacion
+| asciidoctor-diagram | Extension necesaria para poder generar los diagramas desde asciidoc
+| allure | necesario para poder generar reportes de las pruebas
+| behave | necesario para generar los escenarios usando la syntaxis de gherkin
+| pytest | necesario para ejecutar los test del sistema
+|===
+
+.Patrones arquitectonicos
+
+Dado que el sistema no es distribuido sino que se ejecuta en una terminal del usuario
+he decidido utilizar el patron de arquitectura **n-layer** puesto que me permite mantener
+capas claras de abstraccion, encapsular la logica de negocio del resto del sistema y poder extender
+el sistema mas adelante de ser necesario.
+
+.Como alcanzar los objetivos de calidad
+
+[options="header"]
+|===
+| Atributo de calidad | Como alcanzarlo
+| Agility | La agilidad la podemos alcanzar facilmente puesto que los inputs son texto y se pueden ingresar con un comando en la terminal
+| Failidad de desarrollo | Lo alcanzamos al utilizar python como lenguaje y algunas librerias que nos facilitan la tarea
+| Security | Lo alcanzamos al almacenar las notas en local y las cifraremos utilizando la libreria estandar de python
+| Usability | Se alcanza mediante una aplicacion de CLI sencilla y con opciones claras
+|===
+
+=== Metodologia de desarrollo
+* Utilizamos BDD (Behaviour Driven Design) para armar y validar los escenarios de uso del sistema
+* Utilizamos TDD para crear las especificaciones internas del codigo y para refactorizar iterativamente y en ciclos cortos de tiempo el codigo fuente del sistema

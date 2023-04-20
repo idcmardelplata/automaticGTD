@@ -1,0 +1,75 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-building-block-view]]
+
+
+== Vista de Bloques
+
+.Contexto del sistema
+
+[mermaid, format=svg, max-get-size=800]
+----
+C4Context
+    Person(user, "usuario de la aplicacion")
+    
+    System_Boundary(boundary, "Boundary") {
+        System(system, "automaticGTD", "GTD Automation tool")
+    }
+    BiRel(user, system, "knowledge management using")
+    UpdateRelStyle(user,system, $offsetY="-100")
+----
+
+=== Sistema General de Caja Blanca
+
+.Componentes del sistema
+
+_**<Diagrama general>**_
+
+image::component_diagram.svg[]
+
+Motivación::
+
+Dados los requerimientos del sistema se ha optado por utilizar el patron de arquitectura **N-Layer**.
+Este patron permite desacoplar los componentes del sistema en 4 niveles de abstraccion bien diferenciados
+y permite su extensibilidad dado que las distintas capas de abstraccion se comunican mediante interfaces bien definidas
+
+
+// Bloques de construcción contenidos::
+// _<Desripción de los bloques de construcción contenidos (Cajas negras)>_
+// 
+Interfases importantes::
+ El usuario utilizara el sistema mediante la linea de comandos de la terminal
+
+=== Componentes
+
+[options="header"]
+|===
+| Layer | Descripcion
+| View Layer | Es la capa de  interfaz de linea de comandos usada por el usuario para interactuar con el sistema
+| Services Layer | Es la encargada de ofrecer los distintos servicios de la aplicacion abstrayendolos del core de la aplicacion
+| Storage Layer | Es la capa encargada de la persistencia de los datos
+| Core Layer | Es la capa que mantiene la logica de negocio y los elementos del dominio
+|===
+
+==== Componentes de las capas
+
+.View Layer
+* UI: Componente encargado de gestionar la interaccion entre el usuario y el sistema
+
+.Services Layer
+* Parser Service: Componente encargado de tomar un input de texto y transformarlo al formato adecuado segun el tipo de inbox
+* Configuration Service: Componente encargado de gestionar la configuracion general del sistema.
+* Store Service: Componente encargado de gestionar la persistencia segun la configuracion del sistema
+* Notification Service: Componente encargado de notificar al usuario sobre el resultado de las operaciones realizadas en el sistema
+
+.Storage Layer
+* FileSystemStorage: Componente encargado de almacenar los inputs en ficheros del sistema
+
+.Core Layer
+* Text Inbox: Elemento del dominio que define la estructura sobre como debera parsearse el input dado por el usuario
+
+
+=== Interfaces:
+
+* Inbox: Interfaz que permite definir dinamicamente como se debera parsear un input dado por el usuario 
+* Store: Interfaz que permite definir dinamicamente el metodo de almacenaje deseado

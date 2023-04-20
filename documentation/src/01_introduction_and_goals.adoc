@@ -1,0 +1,95 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-introduction-and-goals]]
+== Introducción y Metas
+
+Gtd es una metodologia de organizacion personal/empresarial
+que tiene raices en el concepto de “fluye como el agua” de las artes marciales.
+
+La idea es que uno pueda ir poniendo dentro del sistema distintos tipos de tareas como notas (grandes o pequeñas)
+y olvidarse por completo de ello, asumiendo que el usuario revisara las tareas y las organizara 1 o 2 veces por semana.
+Tambien permite enviar notificaciones de tareas que tienen una fecha limite de ejecucion.
+
+Como adherente de GTD que ha experimentado problemas con la gestión de vida,
+creo que Notion es una herramienta poderosa para crear un marco de gestión de vida,
+pero su enfoque puede resultar en un marco que es demasiado complejo para manejarlo de manera realista.
+
+Por lo tanto, mi objetivo es crear una herramienta CLI basada en GTD más simple
+para simplificar la administración del conocimiento.
+
+
+
+=== Vista de Requerimientos
+
+[options="header"]
+|===
+| Nº requerimiento | Requerimiento | Descripcion
+| 1 | Separar los inbox en 5 pasos  | Dado un inbox este debe ser separado en 5 pasos diferentes (Inbox, Clarificar, Organizar, Revisar, Ejecutar)
+| 2 | Crear contextos en el sistema | Como usuario, quiero poder crear contextos en el sistema
+| 3 | Presentar un metodo ordenado de organizacion | Como usuario, quiero que el sistema me presente un metodo ordenado de Organizacion
+| 4 | Crear un metodo ordenado por defecto | Como usuario, quiero que el sistema me presente un metodo ordenado por defecto para clarificar
+|===
+
+
+=== Metas de Calidad
+
+.Agility: La idea del sistema es poder tomar notas de una manera rapida 
+La toma de notas debe ser algo sencillo y rapido y no debe intervenir
+con lo que estamos haciendo en el sistema
+
+.Usability: El sistema debe ser sencillo de utilizar
+Dado que vamos a estar tomando notas de forma esporadica durante la jornada
+queremos que el sistema sea sencillo de aprender a utilizar y muy intuitivo.
+
+Una clara interfaz de usuario con opciones acorde a las acciones que queremos realizar
+seria una muy buena idea
+
+.Security: Las notas no pueden extraviarse.
+Muchas notas son planificaciones a corto mediano y largo plazo, o notas de estudio o cosas importantes por lo cual
+no podemos darnos el lujo de perderlas o que se corrompan de ninguna manera
+Debemos persistir las notas en un lugar seguro donde las mismas no puedan corromperse.
+
+.Facilidad de desarrollo
+Dado que el sistema se esta haciendo unicamente con fines de aprendizaje,
+la facilidad de desarollo es crucial.
+
+
+.Prioridad de las metas de calidad
+
+[NOTE]
+La priorizacion de estas metas de calidad (tambien llamados atributos de calidad)
+nos permiten conocer donde enfocar mas los esfuerzos y que atributo debe ser
+prioritario con respecto al resto.
+
+[options="header"]
+|===
+|Prioridad |Meta de calidad |Escenario |Prioridad (Cliente / Arquitecto )
+|1
+|Agility
+|Operar con la aplicacion debe ser algo sencillo y rapido
+| Alto / Alto
+|1
+|Facilidad de desarollo
+|El desarrollo debe ser sencillo dado que el fin del sistema es aprender temas de arquitectura y programacion
+| Alto / Alto
+|2
+|Security
+|Las notas tomadas con la aplicacion no pueden corromperse ni perderse
+|Alto / Alto
+|3
+|Usability
+|La aplicacion debe ser intuitiva para el usuario
+|Alto / Medio
+|===
+
+
+=== Partes interesadas (Stakeholders)
+Por ahora las partes interesadas somos dos personas (ambos trabajamos en el mismo proyecto)
+
+[options="header",cols="1,2,2"]
+|===
+| Rol |Contacto                       |Expectativas
+| Arquitecto  | idcmardelplata@protonmail.com | Crear una arquitectura bien planificada que permite al resto de las partes interesadas poder utilizar la aplicacion de una manera efectiva y sin inconvenientes.
+| Desarrollador   | jose.s.contacto@gmail.com | Desarrollar el sistema siguiendo las mejores practicas de desarrollo, basandose principalmente en aprener las bondades del agilismo y como este puede llevarlo de la mano para generar una aplicacion util para los demas.
+| Usuario   | idcmardelplata@protonmail.com, jose.s.contacto@gmail.com | Utilizar el sistema para la gestion personal del conocimiento. Agilizando asi la toma de notas y el volcado de ideas.
+|===
