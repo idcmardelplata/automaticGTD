@@ -1,1 +1,4 @@
 **/__pycache__
+documentation/index.html
+documentation/.asciidoctor/diagram/diag-*.*.cache
+documentation/images/diag-*.{png,svg}
